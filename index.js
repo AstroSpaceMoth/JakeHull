@@ -17,7 +17,7 @@ const handleLeftClick = () => {
   setTimeout(() => {
     nextSlide.dataset.status = "active";
     activeIndex = nextIndex;
-  });
+  }, 0);
 }
 
 const handleRightClick = () => {
@@ -33,7 +33,7 @@ const handleRightClick = () => {
   setTimeout(() => {
     nextSlide.dataset.status = "active";
     activeIndex = nextIndex;
-  });
+  }, 0);
 }
 
 /* -- Mobile Nav Toggle -- */

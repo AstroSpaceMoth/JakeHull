@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>Horizontal Scroll</title>
+        <title>J.H. Digital Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="style.css" />
         <script src="https://kit.fontawesome.com/9aae170b50.js" crossorigin="anonymous"></script>
@@ -17,7 +17,7 @@
     <body>
         <nav>
             <div id="nav-logo-section" class="nav-section">
-                <a href="#">
+                <a href="index.html">
                     <i class="fa-solid fa-j"></i>
                 </a>
             </div>
@@ -40,7 +40,7 @@
     
         <main>
             <article data-index="0" data-status="active">
-                <div class="article-image-section article-section"></div>
+                <a class="article-image-section article-section" href="3dmodeling.html"></a>
                 <div class="article-description-section article-section">
                     <p>Experience in both <u>Blender</u> and <u>Maya</u>.</p>
                     <ul>
@@ -51,36 +51,38 @@
                         <li>Fluid and particle simulations</li>
                     </ul>
                 </div>
-                <div class="article-title-section article-section">
+                <a class="article-title-section article-section" href="3dmodeling.html">
                     <h2>3D Modeling</h2>
                     <i class="fa-solid fa-plus"></i>
-                </div>
+                </a>
                 <div class="article-nav-section article-section">
                     <button class="article-nav-button" type="button" onclick="handleLeftClick()">
                         <i class="fa-solid fa-chevron-left"></i>
-                      <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    </button>
+                    <button class="article-nav-button" type="button" onclick="handleRightClick()">
                         <i class="fa-solid fa-chevron-right"></i>
-                      </button>
+                    </button>
                 </div>
             </article>
-            <article data-index="1" data-status="inactive">
+            <article data-index="1" data-status="after">
                 <div class="article-image-section article-section"></div>
                 <div class="article-description-section article-section">
                     <p>My experience with editing various video formats and file types. Previous work includes manipulating, arranging, post processing, and rendering of both camera and screen recorded footage.</p>
                 </div>
-                <div class="article-title-section article-section">
+                <a class="article-title-section article-section" href="graphicdesign.html">
                     <h2>Graphic Design</h2>
                     <i class="fa-solid fa-plus"></i>
-                </div>
+                </a>
                 <div class="article-nav-section article-section">
                     <button class="article-nav-button" type="button" onclick="handleLeftClick()">
                         <i class="fa-solid fa-chevron-left"></i>
-                      <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    </button>
+                    <button class="article-nav-button" type="button" onclick="handleRightClick()">
                         <i class="fa-solid fa-chevron-right"></i>
-                      </button>
+                    </button>
                 </div>
             </article>
-            <article data-index="2" data-status="inactive">
+            <article data-index="2" data-status="before">
                 <div class="article-image-section article-section"></div>
                 <div class="article-description-section article-section">
                     <p>My experience with editing various video formats and file types. Previous work includes manipulating, arranging, post processing, and rendering of both camera and screen recorded footage.</p>
@@ -92,12 +94,13 @@
                 <div class="article-nav-section article-section">
                     <button class="article-nav-button" type="button" onclick="handleLeftClick()">
                         <i class="fa-solid fa-chevron-left"></i>
-                      <button class="article-nav-button" type="button" onclick="handleRightClick()">
+                    </button>
+                    <button class="article-nav-button" type="button" onclick="handleRightClick()">
                         <i class="fa-solid fa-chevron-right"></i>
-                      </button>
+                    </button>
                 </div>
+            </article>
         </main>
-    </article>
     </body>
     <div id="trailer">
         
