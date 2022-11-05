@@ -1,7 +1,7 @@
 :root {
     --primary-color: #1d1c1b;
-    --secondary-color: #625d57;
-    --tertiary-color: #c7902e;
+    --secondary-color: #4d192e;
+    --tertiary-color: #ff007b;
     --primary-font: #111110;
     --secondary-font: #bbb7b2;
 }
@@ -19,10 +19,52 @@ a, p, h1, h2, h3 {
     text-transform: uppercase;
 }
 
+body,
+html {
+    overflow-y: hidden;
+}
+
+#checkbox{
+    display: inline-block;
+    padding: 15px 18px;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+  }
+
+#nav-toggler {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    opacity: 0;
+}
+
+#checkbox>input[type='checkbox']+i{
+    color: var(--secondary-font);
+}
+  
+#checkbox>input[type='checkbox']:checked+i{
+    color: var(--secondary-color);
+}
+
 .nav {
+    top: 0vh;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(56deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(56deg, var(--tertiary-color), var(--secondary-color), var(--primary-color));
+    position: fixed;
+    z-index: 100;
+    transition: all 0.5s ease 0s;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: #111110;
 }
 
 .logo-holder {
@@ -34,22 +76,45 @@ a, p, h1, h2, h3 {
 }
 
 .logo {
-    padding-top: 10vh;
-    width: 30vh;
+    padding-top: 20vh;
+    width: 40vh;
 }
 
 .welcome {
-    padding-top: 30vh;
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .welcome-message {
     font-size: 3vh;
 }
 
+.return {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .fa-chevron-down {
     color: var(--secondary-font);
-    display: flex;
-    justify-content: center;
-    padding-top: 10vh;
+    margin-top: 5vh;
     font-size: 3vh;
+}
+
+.fa-chevron-up {
+    color: var(--secondary-font);
+    margin-top: 5vh;
+    font-size: 3vh;
+}
+
+#checkbox > .fa-solid {
+    transition: all 0.2s ease;
+}
+
+#checkbox:hover > .fa-solid {
+    transform: scale(1.3);
 }

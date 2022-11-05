@@ -13,20 +13,35 @@
     </head>
 
     <body>
-        <div class="nav">
+        <div class="nav" id="navCurtain">
             <div class="logo-holder">
                 <div class="logo">
                     <img src="imgs\logo.svg">
                 </div>
                 <div class="welcome">
                     <h1 class="welcome-message">Welcome to my portfolio</h1>
-                    <i class="fa-solid fa-chevron-down"></i>
+                    <span id="checkbox" onclick="liftNav()">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
                 </div>
             </div>
         </div>
 
-        <main>
+        <script>
+            function liftNav() {
+                document.getElementById("navCurtain").style.top = "-100vh";
+            }
+            function dropNav() {
+                document.getElementById("navCurtain").style.top = "0vh";
+            }
+        </script>
 
-        </main>
+        <div class="main">
+            <div class="return">
+                <span id="checkbox" onclick="dropNav()">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </span>
+            </div>
+        </div>
     </body>
 </html>
