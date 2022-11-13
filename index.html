@@ -10,38 +10,58 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     </head>
 
-    <body>
-        <div class="nav" id="navCurtain">
+    <body data-nav="false" data-about="false" data-contact="false">
+        <main>
+            <div class="bar">
+                <div class="bar-link" id="about-link">
+                    <button id="bar-toggle" type="button" onclick="toggleAbout()">
+                        <a class="bar-link-text" href="#">More About Me</a>
+                    </button>
+                </div>
+                <div id="bar-spacer"></div>
+                <div class="bar-link" id="contact-link">
+                    <button id="bar-toggle" type="button" onclick="toggleContact()">
+                        <a class="bar-link-text" href="#">Get In Touch</a>
+                    </button>
+                </div>
+            </div>
+            <div class="about-color"></div>
+            <div class="contact-color"></div>
             <div class="logo-holder">
-                <div class="logo">
-                    <img src="imgs\logo.svg">
-                </div>
-                <div class="welcome">
-                    <h1 class="welcome-message">Welcome to my portfolio</h1>
-                    <span id="checkbox" onclick="liftNav()">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </span>
-                </div>
+                <img src="imgs\logo.svg">
             </div>
+        </main>
+
+        <nav id="nav">
+            <div id="nav-links">
+                <a class="nav-link" href="#">
+                    <h2 class="nav-link-label">Brand Identity</h2>
+                </a>
+                <a class="nav-link" href="#">
+                    <h2 class="nav-link-label">Motion Graphics</h2>
+                </a>
+                <a class="nav-link" href="#">
+                    <h2 class="nav-link-label">Video Editing</h2>
+                </a>
+                <a class="nav-link" href="#">
+                    <h2 class="nav-link-label">Photo Manipulation</h2>
+                </a>
+            </div>
+        </nav>
+
+        <button id="nav-toggle" type="button" onclick="toggleNav()">
+            <i class="open fa-solid fa-grip-lines"></i>
+            <i class="close fa-solid fa-xmark"></i>
+        </button>
+
+        <div id="cursor">
+            <div class="oval"></div>
         </div>
 
-        <script>
-            function liftNav() {
-                document.getElementById("navCurtain").style.top = "-100vh";
-            }
-            function dropNav() {
-                document.getElementById("navCurtain").style.top = "0vh";
-            }
-        </script>
-
-        <div class="main">
-            <div class="return">
-                <span id="checkbox" onclick="dropNav()">
-                    <i class="fa-solid fa-chevron-up"></i>
-                </span>
-            </div>
-        </div>
+        <script src="nav.js"></script>
+        <script src="cursoreffect.js"></script>
     </body>
 </html>
